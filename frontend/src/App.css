@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #495e57;
+  --dark-primary-color: #3a4b46;
+  --secondary-color: #F4CE14;
+  --text-color: #333;
+  --background-color: #edefee; /* Example background color */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Markazi Text', serif;
+  background-color: var(--background-color);
+}

@@ -1,0 +1,114 @@
+.booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.booking-form {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.booking-form>div {
+  margin: 15px 0;
+  width: 80%;
+}
+
+
+.booking-form h1 {
+  color: white;
+  text-align: center;
+}
+
+.booking-form label {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.booking-form input,
+.booking-form button,
+.booking-form select {
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none
+}
+
+.booking-form input:focus,
+.booking-form button:focus,
+.booking-form select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.booking-submit {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.booking-submit:hover {
+  background-color: var(--secondary-color);
+  filter: brightness(0.8);
+}
+
+.booking-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  border: 1px solid #999999;
+}
+
+.input-error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+@media (max-width: 480px) {
+  .booking-form {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .booking-form h1 {
+    font-size: 24px;
+  }
+
+  .booking-form label {
+    font-size: 16px;
+  }
+
+  .booking-form input,
+  .booking-form select {
+    font-size: 14px;
+  }
+
+  .booking-submit {
+    font-size: 16px;
+  }
+}
+

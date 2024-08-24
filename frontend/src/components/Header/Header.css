@@ -1,0 +1,132 @@
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Markazi Text', sans-serif;
+  padding: 20px;
+  width: 100%;
+  background-color: var(--dark-primary-color);
+  box-sizing: border-box;
+}
+
+.header-container-info {
+  width: 390px;
+}
+
+.header-title {
+  color: var(--secondary-color);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-place {
+  font-size: 40px;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.header-description {
+  font-size: 24px;
+  color: white;
+  font-family: 40px;
+  margin-top: 10px;
+}
+
+.header-reserve-btn {
+  color: var(--dark-primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  font-size: 24px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-reserve-btn:active {
+  background-color: #e3bf00;
+}
+
+.header-reserve-btn:hover {
+  color: white;
+  background-color: #f4cf14ba;
+}
+
+.img-container {
+  height: 100%;
+}
+
+.food-img {
+  position: absolute;
+  top: 10%;
+  right: 11%;
+  height: 110%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Since the image breaks the div it is contained in
+I add an empty div with the size that corresponds to breaking
+If top:10% and height:110% it breaks the div by 20%.
+*/
+.empty-div {
+  width: 100%;
+  height: 75px;
+}
+
+
+@media (max-width: 1300px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .header-container-info {
+    padding-left: 20px;
+  }
+  .food-img {
+    right: 9%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .header-container {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .food-img {
+    right: 7%;
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-container-info {
+    height: none;
+    width: 70% ;
+    text-align: center;
+  }
+
+  .food-img {
+    /* display: none; */
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Full width of the container */
+    height: 400px;
+    margin-top: 20px; /* Add margin for spacing */
+  }
+  .empty-div {
+    width: 0;
+    height: 0;
+  }
+}
