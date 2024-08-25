@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import "./BookingForm.css";
+import "../Form.css";
 
 const BookingForm = ({ bookingTimes, submitForm }) => {
   const { availableTimes, dispatchAvailableTimes } = bookingTimes;
@@ -18,7 +18,7 @@ const BookingForm = ({ bookingTimes, submitForm }) => {
 
 
   return (
-    <div className="booking-container">
+    <div className="form-container">
       <Formik
         initialValues={{
           name: '',
@@ -34,7 +34,7 @@ const BookingForm = ({ bookingTimes, submitForm }) => {
         }}
       >
         {({ values, setFieldValue, touched, setFieldTouched, setTouched }) => (
-          <Form className="booking-form">
+          <Form className="form">
             <h1>Book a Table</h1>
 
             <div>
@@ -133,7 +133,7 @@ const BookingForm = ({ bookingTimes, submitForm }) => {
             <div>
               <button
                 type="submit"
-                className="booking-submit"
+                className="submit-btn"
                 disabled={!values.name || !values.email || !values.date || !values.time || values.guests < 1 || values.guests > 10}
               >
                 Make Your reservation

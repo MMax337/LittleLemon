@@ -5,6 +5,8 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 import { fetchAPI, submitAPI } from '../fetchScript';
 import ConfirmedBooking from './ConfirmedBooking/ConfirmedBooking';
+import LoginPage from './LoginPage';
+import RegisterPage from './RegisterPage';
 
 export const initializeTimes = () => fetchAPI(new Date());
 
@@ -42,7 +44,9 @@ const Main = () => {
       </Route>
       <Route path='/confirmation' element={<ConfirmedBooking booking={bookingInfromation}/>}></Route>
       <Route path="/order" element={<Homepage />}></Route>
-      <Route path="/login" element={<Homepage />}></Route>
+      <Route path="/login" element={<LoginPage />}></Route>
+      <Route path="/register" element={<RegisterPage />}></Route>
+
     </Routes>
     </main>
   )

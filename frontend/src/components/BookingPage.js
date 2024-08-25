@@ -1,4 +1,4 @@
-import BookingForm from "./BookingForm/BookingForm"
+import BookingForm from "./forms/BookingForm/BookingForm"
 
 const BookingPage = ({bookingTimes, submitForm}) => {
   return (

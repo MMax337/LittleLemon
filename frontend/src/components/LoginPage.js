@@ -1,9 +1,9 @@
-// import BookingForm from "./Login/Login"
+import Login from "./forms/Login/Login"
 
-// const LoginPage = ({bookingTimes, submitForm}) => {
-//   return (
-//     <BookingForm bookingTimes={bookingTimes} submitForm={submitForm}/>
-//   )
-// }
+const LoginPage = ({ submitForm }) => {
+  return (
+    <Login submitForm={submitForm}/>
+  )
+}
 
-// export default LoginPage;
+export default LoginPage;
