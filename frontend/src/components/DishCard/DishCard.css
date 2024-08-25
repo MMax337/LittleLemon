@@ -47,6 +47,7 @@
 .description {
   text-align: justify;
   max-width: 65ch;
+  max-height: 120px;
   color: black;
   font-size: 16px;
   line-height: 1.5;

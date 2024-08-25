@@ -9,7 +9,7 @@ const DishCard = ({dish}) => {
       <div className='card-info'>
         <div className='info-div'>
           <p className='name'>{name}</p>
-          <p className='price'>${price.toFixed(2)}</p>
+          <p className='price'>${price}</p>
         </div>
         <p className='description'>{description}</p>
       </div>
