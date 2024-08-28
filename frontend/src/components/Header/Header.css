@@ -38,24 +38,6 @@
   margin-top: 10px;
 }
 
-.header-reserve-btn {
-  color: var(--dark-primary-color);
-  background-color: var(--secondary-color);
-  border-radius: 15px;
-  font-size: 24px;
-  padding: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.header-reserve-btn:active {
-  background-color: #e3bf00;
-}
-
-.header-reserve-btn:hover {
-  color: white;
-  background-color: #f4cf14ba;
-}
 
 .img-container {
   height: 100%;

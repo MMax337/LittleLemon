@@ -7,6 +7,7 @@ import { fetchAPI, submitAPI } from '../fetchScript';
 import ConfirmedBooking from './ConfirmedBooking/ConfirmedBooking';
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
+import DashBoard from './DashBoard/DashBoard';
 
 export const initializeTimes = () => fetchAPI(new Date());
 
@@ -46,6 +47,8 @@ const Main = () => {
       <Route path="/order" element={<Homepage />}></Route>
       <Route path="/login" element={<LoginPage />}></Route>
       <Route path="/register" element={<RegisterPage />}></Route>
+      <Route path="/dashboard" element={<DashBoard />}></Route>
+
 
     </Routes>
     </main>

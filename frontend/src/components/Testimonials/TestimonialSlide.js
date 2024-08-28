@@ -12,12 +12,12 @@ const TestimonialSlide = ({testimonial}) => {
       <div className='stars'>
       {
         Array.from({ length: stars }).map((_, index) => (
-            <i key={index} class='bx bxs-star'></i>
+            <i key={index} className='bx bxs-star'></i>
         ))
       }
       </div>
       <p className='testimonial-review'>{comment}</p>
-      <i class='bx bxs-quote-alt-left testimonial-quote' ></i>
+      <i className='bx bxs-quote-alt-left testimonial-quote' ></i>
     </div>
     </section>
   );

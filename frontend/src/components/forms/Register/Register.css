@@ -3,16 +3,16 @@
   font-size: 1.3rem;
 }
 
-.form p a{
+.login-link {
   text-decoration: none;
 }
 
-.form p a:hover {
+.login-link {
   text-decoration: underline;
   cursor: pointer;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-.form p a:visited{
+.login-link {
   color: white;
 }

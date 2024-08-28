@@ -1,8 +1,8 @@
 import Login from "./forms/Login/Login"
 
-const LoginPage = ({ submitForm }) => {
+const LoginPage = () => {
   return (
-    <Login submitForm={submitForm}/>
+    <Login/>
   )
 }
 

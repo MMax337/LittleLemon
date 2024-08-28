@@ -1,5 +1,6 @@
 import './Menu.css'
 import DishCard from '../DishCard/DishCard'
+import PrimaryButton from '../buttons/PrimaryButton/PrimaryButton'
 
 import { useEffect, useState } from 'react'
 
@@ -17,7 +18,7 @@ const Menu = () => {
     <div id="menu">
       <div className='main-info'>
         <h1>This weeks specials!</h1>
-        <button className="btn-menu">Online Menu</button>
+        <PrimaryButton text='Online Menu'/>
       </div>
       <div className="menu">
       {

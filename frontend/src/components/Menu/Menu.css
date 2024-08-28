@@ -17,24 +17,6 @@ main {
   color: var(--primary-color);
 }
 
-.btn-menu {
-  color: var(--dark-primary-color);
-  background-color: #F4CE14;
-  border-radius: 15px;
-  font-size: 24px;
-  padding: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn-menu:active {
-  background-color: #e3bf00;
-}
-
-.btn-menu:hover {
-  color: white;
-  background-color: #f4cf14ba;
-}
 
 .menu {
   display: flex;

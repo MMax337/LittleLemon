@@ -33,7 +33,7 @@ const BookingForm = ({ bookingTimes, submitForm }) => {
           submitForm(values);
         }}
       >
-        {({ values, setFieldValue, touched, setFieldTouched, setTouched }) => (
+        {({ values, setFieldValue, touched, setFieldTouched, errors }) => (
           <Form className="form">
             <h1>Book a Table</h1>
 
@@ -43,7 +43,7 @@ const BookingForm = ({ bookingTimes, submitForm }) => {
                 type="text"
                 id="name"
                 name="name"
-                className={!touched.name || values.date ? '' : 'input-error'}
+                className={!touched.name || values.name ? '' : 'input-error'}
               />
               <ErrorMessage name="name" component="div" className="error-message" />
             </div>
@@ -54,7 +54,7 @@ const BookingForm = ({ bookingTimes, submitForm }) => {
                 type="email"
                 id="email"
                 name="email"
-                className={!touched.email || values.email ? '' : 'input-error'}
+                className={!touched.email || (values.email && !errors.email ) ? '' : 'input-error'}
               />
               <ErrorMessage name="email" component="div" className="error-message" />
             </div>
