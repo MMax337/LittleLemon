@@ -12,6 +12,8 @@ class CustomUserManager(BaseUserManager):
 
         email = self.normalize_email(email)
         user = self.model(email=email)
+
+        # set_password stores a hashed password in the database
         user.set_password(password)
         user.save()
         return user
@@ -28,7 +30,9 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=255)
     is_superuser = models.BooleanField(default=False)
 
+    # Default field for login
     USERNAME_FIELD = 'email'
+    # fields to register, the 'USERNAME_FIELD' and password are already included by default
     REQUIRED_FIELDS = []
 
     objects = CustomUserManager()

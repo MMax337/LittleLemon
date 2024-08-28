@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django_filters',
     'corsheaders',
     'menu',
+    'user',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,12 +59,31 @@ MIDDLEWARE = [
 REST_FRAMEWORK = {
    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
 
+    # if the permission_class in the view is not specified, the default one is used
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
     )
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",  # front-end server
+#     "http://localhost:8000",  # front-end server
+# ]
+
+
+# Allows the credentials (such as cook/ies) to be sent with cross-origin requests
+# (to the websites with the different origin than the backend origin)
+CORS_ALLOWED_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'http://localhost:8000/',
+]
+
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+]
 
 
 ROOT_URLCONF = 'backend.urls'
@@ -96,6 +117,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'user.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
